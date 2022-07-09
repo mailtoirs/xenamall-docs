@@ -23,7 +23,7 @@ Instead, I wanted to create a product which is
 - Multi-tenancy. The idea is that with a multi-tenant microservice system, adding a new client should only create very little overhead
 - A small store owner with a cheap tab should be able to register as a tenant and should be able to run his business efficiently
 - The below diagram shows the microservices I am currently considering the system will have
-  ![Microservices Diag](design/microservices-overall.png)
+  ![Microservices Diagram](design/microservices-overall.png)
 - Each microservice has its own requirement page for documentation
 
 ## Decisions to make
