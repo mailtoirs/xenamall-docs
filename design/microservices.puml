@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/component-diagram
+
+title Overall Microservice Architecture
+
+cloud Mall{
+ [Product Catalog]
+ [Shop Info]
+}
+
+cloud {
+ [Accounting]
+}
+
+cloud {
+ [Inventory]
+}
+
+cloud POS {
+ [Purchase]
+ [Sales]
+ [Payments]
+}
+
+cloud Auth{
+ [User Management]
+ [Auth Service]
+}
+
+ [Inventory] --> [Accounting]
+ [Payments] --> [Accounting]
+ [Product Catalog] -- [Purchase]
+ [Product Catalog] -- [Sales]
+ [Product Catalog] -- [Shop Info]
+ [Sales] --> [Inventory]
+ [Sales] --> [Accounting]
+ [Sales] -- [Payments]
+ [Purchase] --> [Inventory]
+ [Purchase] --> [Accounting]
+ [Purchase] -- [Payments]
+ [User Management] --> [Auth Service]
+@enduml
