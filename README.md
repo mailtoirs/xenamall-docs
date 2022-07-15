@@ -29,3 +29,6 @@ Instead, I wanted to create a product which is
 
 ## Decisions to make
 1. Are we going to do everything on our own or create integrations with existing products?
+
+## Requirements Specifications
+- [POS Module](requirements/pos-requirements.md)

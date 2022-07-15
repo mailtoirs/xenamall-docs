@@ -21,7 +21,9 @@
 ## Features common to all source documents
 * Below diagram shows the states of a source document
   ![State Diagram](../design/sourcedocumentstates.png)
-* Only the documents in Submitted or Posted stated are included for pos reports
+* Only the documents in Submitted or Posted states are included for pos reports
+* Each pos will have a unique active series for purchase, sales and payments
+* User can start a new series and mark it as active
 
 ## Purchase
 * A purchase invoice captures the sales invoice of the supplier and any additional costs involved in that purchase
