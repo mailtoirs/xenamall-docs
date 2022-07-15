@@ -19,14 +19,13 @@ Instead, I wanted to create a product which is
 - Choosing to prefer convention over configurability
 
 ## What is this project
-- A POS with proper inventory, accounting, and web mall integration. Notice that I didn't say 'A proper Inventory and Accounting solution with a POS'. POS needs to be a first class citizen
+- A POS module with proper inventory, accounting, and web mall integration. Notice that I didn't say 'A proper Inventory and Accounting solution with a POS'. POS needs to be a first class citizen
 - Multi-tenancy. The idea is that with a multi-tenant microservice system, adding a new client should only create very little overhead
 - A small store owner with a cheap tab should be able to register as a tenant and should be able to run his business efficiently
 - The below diagram shows the microservices I am currently considering the system will have
   ![Microservices Diagram](design/microservices-overall.png)
 - Each microservice has its own requirement page for documentation
 
+
 ## Decisions to make
-1. Will the POS live independent of the cloud data with an option to sync. Or are we going completely cloud.
-2. A Federated system with multiple dbs for each workstation or not
-3. Are we going to do everything on our own or create integrations with existing products?
+1. Are we going to do everything on our own or create integrations with existing products?
