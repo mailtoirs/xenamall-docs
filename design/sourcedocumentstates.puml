@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/state-diagram
+
+
+[*] --> Saved : Document created
+Saved --> Deleted
+Saved --> Submitted : Transaction took place
+Submitted --> SubmittedModified
+SubmittedModified --> Submitted
+SubmittedModified --> Cancelled
+Submitted --> Cancelled
+Cancelled --> [*]
+
+Deleted --> [*]
+Submitted --> Posted : Posted to accounting and inventory
+Posted --> Reverted
+Reverted --> RevertedModified : Modifications made
+Reverted --> Submitted
+RevertedModified --> Submitted
+
+
+@enduml
