@@ -19,10 +19,23 @@
 * Security for root user is very basic
 
 ## Features common to all source documents
+* Following are considered as source documents
+  - Purchase invoice
+  - Sales invoice
+  - Credit Note
+  - Debit Note
+  - Payment Receipt
+  - Payment Voucher
+  - Stock Reconciliation
+  - Payment Reconciliation
 * Below diagram shows the states of a source document
   ![State Diagram](../design/sourcedocumentstates.png)
 * Only the documents in Submitted or Posted states are included for pos reports
-* Each pos will have a unique active series for purchase, sales and payments
+* Additional states and actions can be introduced through the state machine
+* Once submitted, all changes to the source documents are tracked
+* Submitted documents cannot be deleted
+* Source documents maintain created date, last modified date, created-by and last-modified-by
+* Each pos will have a unique active series for source documents
 * User can start a new series and mark it as active
 
 ## Purchase
