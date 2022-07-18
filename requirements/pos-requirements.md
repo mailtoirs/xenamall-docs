@@ -41,3 +41,10 @@
 ## Purchase
 * A purchase invoice captures the sales invoice of the supplier and any additional costs involved in that purchase
 * Additional costs are used (the sum is distributed) to calculate the cost of good of each item in the purchase
+* A purchase invoice can be linked with multiple payment entries
+* Outstanding of an invoice can be viewed
+* A purchase invoice can be associated with multiple purchase returns
+* Purchase invoice can be entered for past and current dates
+* Posting a purchase invoice will add entries to the Purchase Journal, and the inventory
+* See below for a wireframe 
+  //(TODO)
