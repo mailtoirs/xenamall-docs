@@ -40,11 +40,41 @@
 
 ## Purchase
 * A purchase invoice captures the sales invoice of the supplier and any additional costs involved in that purchase
-* Additional costs are used (the sum is distributed) to calculate the cost of good of each item in the purchase
+* Purchase invoice can't be in the future  
+* Additional costs are used (the sum is distributed) to calculate the total cost of purchase
+* Total cost is used to calculate the cost of each item in the purchase
 * A purchase invoice can be linked with multiple payment entries
 * Outstanding payment of an invoice can be viewed
 * A purchase invoice can be associated with multiple purchase returns
 * Purchase invoice can be entered for past and current dates
 * Posting a purchase invoice sends the details to accounting and inventory modules
-* See below for a wireframe 
-  //(TODO)
+* See below for a wireframe //(TODO)
+
+## Sales
+* Sales invoices captures date/time, customer details, Serial, line items, discount, taxes, other charges, and sales person 
+* A sales invoice captures the line items in a sale
+* Line Items:
+  * Each line item contains the item, unit, unit price, qty, price
+  * Price is calculated as unit price * qty, but can be overridden in case of discounts
+  * Unit displays only the units associated with the item for selection
+  * Once a unit is selected, the unit price is fetched and shown
+  * Item and unit are selectable. Unit price is auto-filled but editable. Price is auto-calculated but editable
+* All prices of line items are added to calculate Grand Total
+* Discount can be entered as a percentage (ending with %) or just a number
+* Tax can be entered as a percentage (ending with %) or just a number
+* Other charges can be entered as a percentage (ending with %) or just a number
+* Net Total = Grand Total + Taxes + Other charges - Discount
+* Customer may opt to pay in full or part or none
+* By default, Net Total is displayed in the Amount Paid
+* Outstanding is Net Total - Amount paid - Amount returned for this invoice  
+* Total payable of the customer is calculated and displayed as customer's Total Payable + Outstanding balance
+* The logged-in user is identified as the sales person. The sales person can manually be entered as well
+* A sales invoice cannot be entered for a future date/time
+* Payments of an invoice:
+  * All payments of an invoice are listed under the payments sections
+  * Any new payments can also be added
+  * Details captured: date/time, mode of payment (Cash/Cheque), amount, reference number (cheque number), and cheque date  
+  * Payments can't exceed the Outstanding amount of the invoice
+  * Once a payment entry is added, Outstanding is adjusted
+  
+## Sales Returns
