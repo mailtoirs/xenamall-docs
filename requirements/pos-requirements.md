@@ -1,14 +1,14 @@
 # POS - Requirements
 ## Overall
-* POS is the client side terminal that requires offline access
-* It is possible to perform day-to-day operations with POS without requiring an active internet connection
+* POS is the client side terminal that offers the most essential source documents of the business, namely Sales Invoice/Returns, Payments Received, etc.
+* It is possible to perform day-to-day operations with POS without requiring an active internet connection. This is a common practice in most businesses. In case where there is no Internet availability, such shops draft manual invoices, and feed them in the system later. The business doesn't shut down because the Internet connectivity is lost. So, a good POS should facilitate this, without pushing the customer towards pen and paper
 * These day-to-day operations are namely
   1. Entering purchase invoices/returns
   2. Entering sales invoices/returns
   3. Payments made and received
 * It is possible to view some basic reports from the data entered
 * It is possible to sync pos entries with the cloud for additional reporting and functionality
-* POS captures all the required details that are required to be fed into the cloud accounting/inventory system
+* POS captures all the details that are required to be fed into the cloud accounting/inventory system
 
 
 ## Login
