@@ -1,19 +1,23 @@
 # POS - Requirements
 ## Overall
-* POS is the client side terminal that offers the most essential source documents of the business, namely Sales Invoice/Returns, Payments Received, etc.
-* It is possible to perform day-to-day operations with POS without requiring an active internet connection. This is a common practice in most businesses. In case where there is no Internet availability, such shops draft manual invoices, and feed them in the system later. The business doesn't shut down because the Internet connectivity is lost. So, a good POS should facilitate this, without pushing the customer towards pen and paper
+* POS is the client side terminal that produces the most essential source documents of the business, namely Sales Invoice/Returns, Payments Received/Returned, etc.
 * These day-to-day operations are namely
   1. Entering purchase invoices/returns
   2. Entering sales invoices/returns
   3. Payments made and received
-* It is possible to view some basic reports from the data entered
+* It is possible to view some basic reports from the data entered in POS
+* The POS system alone will satisfy the requirements of some customers whose needs are simple
 * It is possible to sync pos entries with the cloud for additional reporting and functionality
-* POS captures all the details that are required to be fed into the cloud accounting/inventory system
-
+* So, the POS should be an independent system which is extended by an online versatile accounting and inventory module
+* It is possible to perform day-to-day operations with POS without requiring an active internet connection
+*  1. This enables POS to operate as an independent system
+   2. Even with cloud integrations, in situations where there is no Internet availability, it should be possible to issue source documents with POS and sync the details with the cloud once the connection is restored
+* A single company can have many POS terminals
+* Each POS terminal will have a unique name, and a unique series for its source documents 
 
 ## Login
 * Unless integrated with the cloud, the system allows only a single root user
-* Username and password of the root user is stored locally
+* Username and password of the root user is stored locally, and login is possible regardless of the integration of the cloud
 * Root user has access to all POS features
 * Root user does not have access to any cloud features
 * Security for root user is very basic
@@ -33,8 +37,8 @@
 * Only the documents in Submitted or Posted states are included for pos reports
 * Additional states and actions can be introduced through the state machine
 * Once submitted, all changes to the source documents are tracked
-* Submitted documents cannot be deleted
-* Source documents maintain created date, last modified date, created-by and last-modified-by
+* Submitted documents cannot be deleted permanently, but a soft deletion is allowed
+* Source documents maintain auditability with created date, last modified date, created-by and last-modified-by
 * Each pos will have a unique active series for source documents
 * User can start a new series and mark it as active
 
